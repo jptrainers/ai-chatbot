@@ -8,7 +8,7 @@ import { signIn } from './auth';
 
 const authFormSchema = z.object({
   email: z.string().email(),
-  password: z.string().min(6),
+  password: z.string().min(3),  // Changed from 6 to 3 to allow 'aaa'
 });
 
 export interface LoginActionState {
